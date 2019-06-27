@@ -1,6 +1,6 @@
 	#include<stdio.h>
 	#include<stdbool.h>
-	#define MAX 10000
+	#define MAX 100000
 
 	int main(){
 		
@@ -10,7 +10,8 @@
 
 		for(z=0;z<t;z++){
 
-			int n,target,S[MAX] = {0},temp,flag = 0;
+			int n,target,temp,flag = 0;
+			 bool S[MAX] = {0};
 
 			scanf("%d",&n);
 
@@ -25,11 +26,13 @@
 
 				temp = target - a[i];
 				 if(S[temp] == 1){
-				 	printf("%d %d\n",temp,a[i]);
+				     
 				 	printf("Yes\n");
 				 	flag = 1;
+				 	break;
 				 }
-				 S[temp] = 1;
+				//  S[temp] = 1;
+				 S[a[i]] = 1;
 
 
 			}
